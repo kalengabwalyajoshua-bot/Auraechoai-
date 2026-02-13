@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoAI — Neural OS Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="neural-background"></div>
+    <div class="particle-field"></div>
+    
+    <header class="system-header">
+        <div class="cognitive-buffer">
+            <span class="buffer-label">COGNITIVE BUFFER</span>
+            <div class="buffer-bar">
+                <div class="buffer-fill"></div>
+            </div>
+        </div>
+        <div class="ai-state">
+            <span class="state-indicator"></span>
+            <span class="state-text">ATTUNED</span>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <section id="chat-screen" class="screen active">
+            <div class="chat-container">
+                <div class="quantum-core">
+                    <div class="orb-container">
+                        <div class="orb">
+                            <div class="orb-inner"></div>
+                            <div class="orb-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messages-container"></div>
+                <div class="suggestion-chips"></div>
+                <div class="input-zone">
+                    <div class="input-wrapper">
+                        <input type="text" class="message-input" placeholder="Communicate with neural core...">
+                        <button class="voice-toggle" title="Toggle Voice">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                <line x1="12" y1="19" x2="12" y2="23"></line>
+                                <line x1="8" y1="23" x2="16" y2="23"></line>
+                            </svg>
+                        </button>
+                        <button class="send-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision-screen" class="screen">
+            <div class="vision-container">
+                <video class="camera-feed" autoplay playsinline></video>
+                <canvas class="vision-canvas"></canvas>
+                <div class="hud-overlay">
+                    <div class="scan-line"></div>
+                    <div class="corner-frame top-left"></div>
+                    <div class="corner-frame top-right"></div>
+                    <div class="corner-frame bottom-left"></div>
+                    <div class="corner-frame bottom-right"></div>
+                    <div class="scan-status">READY</div>
+                </div>
+                <div class="analysis-panel">
+                    <div class="analysis-header">VISUAL ANALYSIS</div>
+                    <div class="analysis-content"></div>
+                </div>
+                <button class="capture-btn">CAPTURE & ANALYZE</button>
+            </div>
+        </section>
+
+        <section id="story-screen" class="screen">
+            <div class="story-container">
+                <div class="genre-selection">
+                    <h2 class="genre-title">SELECT NARRATIVE DIMENSION</h2>
+                    <div class="genre-grid">
+                        <div class="genre-card" data-genre="sci-fi">
+                            <div class="genre-icon">🌌</div>
+                            <div class="genre-name">Quantum Fiction</div>
+                        </div>
+                        <div class="genre-card" data-genre="mystery">
+                            <div class="genre-icon">🔮</div>
+                            <div class="genre-name">Neural Mystery</div>
+                        </div>
+                        <div class="genre-card" data-genre="romance">
+                            <div class="genre-icon">💫</div>
+                            <div class="genre-name">Emotional Cascade</div>
+                        </div>
+                        <div class="genre-card" data-genre="adventure">
+                            <div class="genre-icon">⚡</div>
+                            <div class="genre-name">Dimensional Shift</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-reader">
+                    <button class="back-to-genres">← GENRES</button>
+                    <div class="story-text"></div>
+                    <button class="narrate-btn">NARRATE</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="mindspace-screen" class="screen">
+            <div class="mindspace-container">
+                <h2 class="mindspace-title">COGNITIVE MAP</h2>
+                <svg class="neural-network" viewBox="0 0 800 600"></svg>
+            </div>
+        </section>
+
+        <section id="flow-screen" class="screen">
+            <div class="flow-container">
+                <div class="flow-orb">
+                    <div class="flow-orb-inner"></div>
+                    <div class="flow-orb-glow"></div>
+                </div>
+                <div class="flow-text"></div>
+                <div class="flow-input-zone">
+                    <input type="text" class="flow-input" placeholder="Enter flow state...">
+                </div>
+            </div>
+        </section>
+
+        <section id="evolution-screen" class="screen">
+            <div class="evolution-container">
+                <h2 class="evolution-title">EVOLUTION CHAMBER</h2>
+                <div class="evolution-orb">
+                    <div class="evo-orb"></div>
+                </div>
+                <div class="level-display">
+                    <div class="level-number">LEVEL <span class="level-value">1</span></div>
+                    <div class="level-title">DORMANT CORE</div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text"><span class="progress-current">0</span> / <span class="progress-target">10</span></div>
+                </div>
+                <div class="evolution-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">INTERACTIONS</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">COGNITIVE DEPTH</span>
+                        <span class="stat-value">INITIALIZING</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-screen="chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Chat</span>
+        </button>
+        <button class="nav-item" data-screen="vision">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span>Vision</span>
+        </button>
+        <button class="nav-item" data-screen="story">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span>Story</span>
+        </button>
+        <button class="nav-item" data-screen="mindspace">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <circle cx="19" cy="5" r="2"></circle>
+                <circle cx="5" cy="19" r="2"></circle>
+                <circle cx="19" cy="19" r="2"></circle>
+                <line x1="12" y1="15" x2="5" y2="19"></line>
+                <line x1="12" y1="9" x2="19" y2="5"></line>
+                <line x1="15" y1="12" x2="19" y2="19"></line>
+            </svg>
+            <span>Mindspace</span>
+        </button>
+        <button class="nav-item" data-screen="flow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12h8"></path>
+            </svg>
+            <span>Flow</span>
+        </button>
+        <button class="nav-item" data-screen="evolution">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Evolution</span>
+        </button>
+        <div class="nav-indicator"></div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
